@@ -6,8 +6,16 @@
 	<link rel="stylesheet" type="text/css"href="css.css">
 </head>
 <body>
-	<header>Header</header>
-	<main>
+	<header>
+		<img src="logo">
+		<a href="">O Quiosque</a>
+		<a href="">Cardápio</a>
+		<a href="">Contato</a>
+	</header>
+	<section id="quiosque">
+		blabla
+	</section>
+	<section id="cardapio">
 		<div id="cervejas">
 			dfgthy
 		</div>
@@ -38,18 +46,26 @@
 		<div id="sucos">
 			dfgthy
 		</div>
-	</main>
-	<section id="map">
-		<script>
-			function initMap() {
-				var quisque_pos = {lat: -24.1838674, lng: -46.7826317};
-				var map = new google.maps.Map(
-					document.getElementById('map'), {zoom: 16, center: quisque_pos});
-				var marker = new google.maps.Marker({position: quisque_pos, map: map});
-			}
-		</script>
-		<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 	</section>
-	<footer>Footer</footer>
+	<section id="contato">
+		<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1819.8272580430869!2d-46.782559129345216!3d-24.183846280019065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1598661405643!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		formulario de mesnagem
+		ENDEREÇO E TELEFONES
+Telefone
+(13) 3427-1698
+
+Endereço
+Av. Pres. Vargas, 1054 - Centro, Itanhaém - SP
+
+
+HORÁRIO DE FUNCIONAMENTO
+Seg. à seg.
+Das 09h às 21h
+
+
+Siga a gente
+ 
+
+	</section>
 </body>
 </html>

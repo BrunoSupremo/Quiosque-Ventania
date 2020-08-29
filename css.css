@@ -1,10 +1,17 @@
+:root{
+	--branco_claro: #fafafa;
+	--branco_escuro: #f0f0f0;
+	--preto: #29221c;
+	--cor_quiosque: #FF8800;
+}
+
 body {
 	padding: 0;
 	margin: 0;
 	font: 20px sans-serif;
 }
 
-main{
+#cardapio{
 	min-height: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -12,23 +19,23 @@ main{
     align-content: center;
 }
 
-main div{
+#cardapio div{
 	min-height: 100px;
 	min-width: 100px;
 	margin: 1em;
 	padding: 1em;
-	background-color: coral;
+	background-color: var(--cor_quiosque);
 }
-main div:focus{
+#cardapio div:focus{
 	background: black;
 }
 
-#map{
+#contato{
 	height: 100%;
 	width: 100%;
 }
 
-header, footer{
+header{
 	padding: 1em;
-	background-color: coral;
+	background-color: var(--cor_quiosque);
 }
