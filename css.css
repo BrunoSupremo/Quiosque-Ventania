@@ -1,22 +1,59 @@
-:root{
-	--branco_claro: #fafafa;
-	--branco_escuro: #f0f0f0;
-	--preto: #29221c;
-	--cor_quiosque: #FF8800;
+*{
+	font-size: 20px;
 }
+:root{
+	--branco: #ffffee;
+	--preto: #222222;
+	--cor_principal: #FF8800;
 
+	--full_height: calc(100% - 3em);
+}
+html {
+	scroll-behavior: smooth;
+}
 body {
 	padding: 0;
 	margin: 0;
 	font: 20px sans-serif;
+	background-color: var(--branco);
+	color: var(--preto);
+}
+a{
+	color: var(--branco);
+	text-decoration: none;
 }
 
-#cardapio{
-	min-height: 100%;
+header{
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	background-color: var(--cor_principal);
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+	justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+}
+#logo{
+	margin-left: 1em;
+	margin-right: auto;
+}
+header a{
+	margin: 0 1em;
+}
+#quiosque{
+	padding: 1em;
+}
+#cardapio{
+	min-height: var(--full_height);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
 }
 
 #cardapio div{
@@ -24,18 +61,38 @@ body {
 	min-width: 100px;
 	margin: 1em;
 	padding: 1em;
-	background-color: var(--cor_quiosque);
-}
-#cardapio div:focus{
-	background: black;
+	background-color: var(--cor_principal);
+	color: var(--branco);
 }
 
-#contato{
-	height: 100%;
+#map_section{
+	height: var(--full_height);
 	width: 100%;
 }
-
-header{
+#formulario{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+#formulario *{
+	margin: 1em;
 	padding: 1em;
-	background-color: var(--cor_quiosque);
+}
+
+#detalhes{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+#detalhes > div{
+	background-color: var(--cor_principal);
+	color: var(--preto);
+	margin: 1em;
+	padding: 1em;
+}
+#detalhes > div h1{
+	color: var(--branco);
+	text-align: center;
 }
