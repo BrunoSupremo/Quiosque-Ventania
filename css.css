@@ -74,10 +74,17 @@ header a{
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-}
-#formulario *{
-	margin: 1em;
 	padding: 1em;
+}
+#formulario input, #formulario textarea, #formulario button{
+	padding: 1em;
+}
+#formulario span{
+	margin: 1em 0.5em 0.5em;
+}
+#formulario button{
+	align-self: center;
+	margin: 1em;
 }
 
 #detalhes{
