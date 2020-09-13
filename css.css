@@ -5,8 +5,6 @@
 	--branco: #ffffee;
 	--preto: #222222;
 	--cor_principal: #FF8800;
-
-	--full_height: calc(100% - 3em);
 }
 html {
 	scroll-behavior: smooth;
@@ -15,23 +13,26 @@ body {
 	padding: 0;
 	margin: 0;
 	font: 20px sans-serif;
-	background-color: var(--branco);
+	background-color: var(--cor_principal);
 	color: var(--preto);
 }
 a{
 	color: var(--branco);
 	text-decoration: none;
+	transition: .2s;
+}
+a:hover{
+	transform: scale(1.1);
 }
 
 header{
-	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
 	padding: 1em;
 	box-sizing: border-box;
 	margin-bottom: 1em;
-	background-color: var(--cor_principal);
+	background-color: var(--preto);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
@@ -49,7 +50,7 @@ header a{
 	padding: 1em;
 }
 #cardapio{
-	min-height: var(--full_height);
+	min-height: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -61,12 +62,12 @@ header a{
 	min-width: 100px;
 	margin: 1em;
 	padding: 1em;
-	background-color: var(--cor_principal);
+	background-color: var(--preto);
 	color: var(--branco);
 }
 
 #map_section{
-	height: var(--full_height);
+	height: 100%;
 	width: 100%;
 }
 #formulario{
@@ -85,6 +86,14 @@ header a{
 #formulario button{
 	align-self: center;
 	margin: 1em;
+	border:none;
+	background: var(--preto);
+	color: var(--branco);
+	transition: .2s;
+}
+#formulario button:hover{
+	border-radius: .5em;
+	transform: scale(1.1);
 }
 
 #detalhes{
@@ -94,12 +103,11 @@ header a{
 	align-content: center;
 }
 #detalhes > div{
-	background-color: var(--cor_principal);
-	color: var(--preto);
+	background-color: var(--preto);
+	color: var(--branco);
 	margin: 1em;
 	padding: 1em;
 }
 #detalhes > div h1{
-	color: var(--branco);
 	text-align: center;
 }
