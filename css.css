@@ -5,6 +5,7 @@
 	--branco: #ffffee;
 	--preto: #222222;
 	--cor_principal: #FF8800;
+	--bloco_minimo: 180px;
 }
 html {
 	scroll-behavior: smooth;
@@ -58,8 +59,8 @@ header a{
 }
 
 #cardapio div{
-	min-width: 180px;
-	min-width: 180px;
+	min-width: var(--bloco_minimo);
+	min-height: var(--bloco_minimo);
 	margin: 1em;
 	padding: 1em;
 	background-color: var(--preto);
@@ -117,6 +118,8 @@ header a{
 	color: var(--branco);
 	margin: 1em;
 	padding: 1em;
+	min-height: var(--bloco_minimo);
+	min-width: var(--bloco_minimo);
 }
 #detalhes > div h1{
 	text-align: center;
