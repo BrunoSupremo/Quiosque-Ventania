@@ -4,6 +4,8 @@
 :root{
 	--branco: #ffffee;
 	--preto: #222222;
+	--iluminado: rgba(255,255,255,0.1);
+	--sombra: rgba(0,0,0,0.33);
 	--cor_principal: #FF8800;
 	--bloco_minimo: 180px;
 }
@@ -63,8 +65,10 @@ header a{
 	min-height: var(--bloco_minimo);
 	margin: 1em;
 	padding: 1em;
-	background-color: var(--preto);
+	background-color: var(--iluminado);
 	color: var(--branco);
+	border-radius: 0.5em;
+	box-shadow: 0px 10px 20px -10px var(--sombra);
 }
 #cardapio div h1{
 	text-align: center;
@@ -103,7 +107,7 @@ header a{
 	transition: .2s;
 }
 #formulario button:hover{
-	border-radius: .5em;
+	border-radius: .25em;
 	transform: scale(1.1);
 }
 
@@ -114,12 +118,14 @@ header a{
 	align-content: center;
 }
 #detalhes > div{
-	background-color: var(--preto);
+	background-color: var(--iluminado);
 	color: var(--branco);
 	margin: 1em;
 	padding: 1em;
 	min-height: var(--bloco_minimo);
 	min-width: var(--bloco_minimo);
+	border-radius: 0.5em;
+	box-shadow: 0px 10px 20px -10px var(--sombra);
 }
 #detalhes > div h1{
 	text-align: center;
