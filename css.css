@@ -83,45 +83,19 @@ header a{
 	text-align: center;
 	position: relative;
 }
-#cardapio div h1::before{
-	content: "";
+#cardapio div img{
+	opacity: 0;
+	transition: 1s;
 	position: absolute;
 	display: block;
-	top: -3em;
-	width: 100%;
+	top: -1.5em;
+	width: var(--bloco_minimo);
 	height: 3em;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
+	object-fit: contain;
 	filter: drop-shadow(1px 3px 1px var(--sombra));
 }
-
-#cardapio #cervejas h1::before{
-	background-image: url(cervejas.webp);
-}
-#cardapio #doses h1::before{
-	background-image: url(doses.webp);
-}
-#cardapio #caipirinhas h1::before{
-	background-image: url(caipirinhas.webp);
-}
-#cardapio #batidas h1::before{
-	background-image: url(batidas.webp);
-}
-#cardapio #sucos h1::before{
-	background-image: url(sucos.webp);
-}
-#cardapio #porcoes h1::before{
-	background-image: url(porcoes.webp);
-}
-#cardapio #petiscos h1::before{
-	background-image: url(petiscos.webp);
-}
-#cardapio #salgados h1::before{
-	background-image: url(salgados.webp);
-}
-#cardapio #refrescos h1::before{
-	background-image: url(refrescos.webp);
+#cardapio div img.visible{
+	opacity: 1;
 }
 
 #cardapio div ul{
