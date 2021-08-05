@@ -22,7 +22,7 @@ body {
 a{
 	color: var(--branco);
 	text-decoration: none;
-	transition: .2s;
+	transition: .1s;
 }
 a:hover{
 	transform: scale(1.1);
@@ -65,6 +65,7 @@ header a{
 }
 
 #cardapio div{
+	cursor: pointer;
 	position: relative;
 	min-width: var(--bloco_minimo);
 	max-width: var(--bloco_minimo);
@@ -85,7 +86,7 @@ header a{
 }
 #cardapio div img{
 	opacity: 0;
-	transition: 1s;
+	transition: opacity 1s, transform 0s;
 	position: absolute;
 	display: block;
 	top: -1.5em;
@@ -93,6 +94,15 @@ header a{
 	height: 3em;
 	object-fit: contain;
 	filter: drop-shadow(1px 3px 1px var(--sombra));
+}
+#cardapio div:hover, #cardapio div.visible{
+	box-shadow:
+	0px 10px 20px -10px var(--sombra),
+	0px 0px 2px 2px var(--iluminado) inset;
+}
+#cardapio div:hover img{
+	transform: rotate(5deg) translateY(-5px);
+	filter: drop-shadow(1px 8px 1px var(--sombra));
 }
 #cardapio div img.visible{
 	opacity: 1;
@@ -146,7 +156,7 @@ header a{
 	border:none;
 	background: var(--preto);
 	color: var(--branco);
-	transition: .2s;
+	transition: .1s;
 }
 #formulario button:hover{
 	border-radius: .25em;
