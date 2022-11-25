@@ -1,10 +1,5 @@
-function toggle_visibility(){
-	this.classList.toggle("visible");
-}
-
-let items_cardapio = document.querySelectorAll('#cardapio div');
-for (let i = 0; i < items_cardapio.length; i++) {
-	items_cardapio[i].onclick = toggle_visibility;
+if (window.location.search == "?cardapio"){
+	document.querySelector("body").classList.add("só_cardapio");
 }
 
 let imagens_cardapio = document.querySelectorAll('#cardapio div img');

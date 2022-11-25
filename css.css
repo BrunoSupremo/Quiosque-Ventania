@@ -7,7 +7,6 @@
 	--iluminado: rgba(255,255,255,0.1);
 	--sombra: rgba(0,0,0,0.33);
 	--cor_principal: #FF8800;
-	--bloco_minimo: max(calc(100vw / 1400 * 180), 180px);
 }
 html {
 	scroll-behavior: smooth;
@@ -26,6 +25,9 @@ a{
 }
 a:hover{
 	transform: scale(1.1);
+}
+.só_cardapio :is(header a, #quiosque, #map_section, #contatos){
+	display: none;
 }
 
 header{
@@ -57,80 +59,67 @@ header a{
 	margin: .5em auto;
 }
 #cardapio{
-	min-height: 80%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
+	align-items: flex-start;
+	padding: 1em;
+	gap: 2em;
 }
 
 #cardapio div{
 	cursor: pointer;
 	position: relative;
-	min-width: var(--bloco_minimo);
-	max-width: var(--bloco_minimo);
-	min-height: var(--bloco_minimo);
-	margin: 1em;
-	padding: 1em;
+	padding: 0;
 	background-color: var(--iluminado);
 	color: var(--branco);
-	border-radius: 0.5em;
+	border-radius: .5em .5em 1em 1em;
 	box-shadow: 0px 10px 20px -10px var(--sombra);
 }
-#cardapio div.visible{
-	max-width: none;
-}
-#cardapio div h1{
-	text-align: center;
-	position: relative;
+#cardapio div:hover{
+	box-shadow:
+	0px 10px 20px -10px var(--sombra),
+	0px 0px 2px 2px var(--iluminado) inset;
 }
 #cardapio div img{
 	opacity: 0;
 	transition: opacity 1s, transform 0s;
 	position: absolute;
 	display: block;
-	top: -1.5em;
-	width: var(--bloco_minimo);
+	top: -1em;
+	width: 6em;
 	height: 3em;
 	object-fit: contain;
 	filter: drop-shadow(1px 3px 1px var(--sombra));
 }
-#cardapio div:hover, #cardapio div.visible{
-	box-shadow:
-	0px 10px 20px -10px var(--sombra),
-	0px 0px 2px 2px var(--iluminado) inset;
+#cardapio div img.visible{
+	opacity: 1;
 }
 #cardapio div:hover img{
 	transform: rotate(5deg) translateY(-5px);
 	filter: drop-shadow(1px 8px 1px var(--sombra));
 }
-#cardapio div img.visible{
-	opacity: 1;
+#cardapio div h1{
+	text-align: center;
+	background-color: var(--preto);
+	padding: 1em;
+	margin: 0;
+	margin-left: 6em;
+	border-radius: 0em 0.5em 0em 0.5em;
 }
 
 #cardapio div ul{
 	list-style-type: none;
-	padding: 0;
+	padding: 1em;
+	margin: 0;
+	text-align: right;
 }
-#cardapio div ul :nth-child(n+4){
-	max-height: 0;
-	overflow: hidden;
-	transition: .5s;
+#cardapio div li{
+	padding: .25em 0;
 }
-#cardapio div.visible ul :nth-child(n+4){
-	max-height: 2em;
+#cardapio div li:nth-child(even){
+	background-image: linear-gradient(to right, transparent, var(--cor_principal));
 }
-#cardapio div::after{
-	content: "...";
-	display: inline-block;
-	transform: scale(0);
-	transform-origin: left;
-	transition: .2s;
-}
-#cardapio div:not(#refrescos, .visible):hover::after{
-	transform: scale(3);
-}
-
 #map_section{
 	height: 100%;
 	width: 100%;
@@ -148,7 +137,12 @@ header a{
 	padding: 1em;
 }
 #formulario span{
-	margin: 1em 0.5em 0.5em;
+	margin: 1em 0.5em 0;
+	background: #222222;
+	color: var(--branco);
+	width: max-content;
+	padding: .75em 1em 0.5em;
+	border-radius: 1em 1em 0 0;
 }
 #formulario button{
 	align-self: center;
@@ -167,20 +161,25 @@ header a{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
+	gap: 2em;
+	padding: 1em;
 }
 #detalhes > div{
 	background-color: var(--iluminado);
 	color: var(--branco);
-	margin: 1em;
-	padding: 1em;
-	min-height: var(--bloco_minimo);
-	min-width: var(--bloco_minimo);
 	border-radius: 0.5em;
 	box-shadow: 0px 10px 20px -10px var(--sombra);
 }
 #detalhes > div h1{
-	text-align: center;
+	background-color: var(--preto);
+	padding: 1em;
+	margin: 0;
+	margin-left: auto;
+	width: max-content;
+	border-radius: 0em 0.5em 0em 0.5em;
+}
+#detalhes > div p{
+	margin: 1em;
 }
 #detalhes > div p span{
 	margin-left: 1em;
