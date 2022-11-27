@@ -74,11 +74,14 @@ header a{
 	background-color: var(--iluminado);
 	color: var(--branco);
 	border-radius: .5em .5em 1em 1em;
-	box-shadow: 0px 10px 20px -10px var(--sombra);
+	box-shadow:
+	0px 10px 20px -10px var(--sombra),
+	0px 0px 2px 2px var(--iluminado) inset;
 }
 #cardapio div:hover{
 	box-shadow:
 	0px 10px 20px -10px var(--sombra),
+	0px 0px 2px 2px var(--iluminado) inset,
 	0px 0px 2px 2px var(--iluminado) inset;
 }
 #cardapio div img{
@@ -106,20 +109,57 @@ header a{
 	margin: 0;
 	margin-left: 6em;
 	border-radius: 0em 0.5em 0em 0.5em;
+	box-shadow: -1px 1px 2px 1px var(--iluminado) inset;
+}
+#cardapio div h2{
+	margin: .5em 0 0;
+	background: #222;
+	padding: 0.25em 0.5em 0 1em;
+	width: max-content;
+	border-radius: 0 1em 1em 0;
+	font-size: .9em;
 }
 
 #cardapio div ul{
 	list-style-type: none;
-	padding: 1em;
+	padding: 1em 0;
 	margin: 0;
 	text-align: right;
 }
 #cardapio div li{
-	padding: .25em 0;
+	padding: .25em 1em;
+	display: flex;
+	justify-content: space-between;
+	transition: 1s;
+	gap: 0;
 }
-#cardapio div li:nth-child(even){
+#cardapio.mostrar_preços div li{
+	gap: 2em;
+}
+#cardapio div li:nth-of-type(even){
 	background-image: linear-gradient(to right, transparent, var(--cor_principal));
 }
+#cardapio div li span:nth-child(1){
+	width: 0;
+	opacity: 0;
+	transition: 1s;
+	overflow: hidden;
+}
+#cardapio.mostrar_preços div li span:nth-child(1){
+	width: 5ch;
+	opacity: 1;
+}
+#cardapio #dinheiro{
+	border-radius: 1em;
+	position: sticky;
+	top: 2em;
+	padding: 1em;
+	background-color: #222;
+	z-index: 1;
+	font-size: .9em;
+	align-self: flex-end;
+}
+
 #map_section{
 	height: 100%;
 	width: 100%;
