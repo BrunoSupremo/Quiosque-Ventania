@@ -63,13 +63,12 @@ header a{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 1em;
-	gap: 2em;
 }
 
 #cardapio div{
 	cursor: pointer;
 	position: relative;
+	margin: 1em;
 	padding: 0;
 	background-color: var(--iluminado);
 	color: var(--branco);
@@ -113,10 +112,10 @@ header a{
 }
 #cardapio div h2{
 	margin: .5em 0 0;
-	background: #222;
-	padding: 0.25em 0.5em 0 1em;
+	background-color: var(--preto);
+	padding: 0.25em 0.5em .1em 1em;
 	width: max-content;
-	border-radius: 0 1em 1em 0;
+	border-radius: 0 .5em .5em 0;
 	font-size: .9em;
 }
 
@@ -152,12 +151,36 @@ header a{
 #cardapio #dinheiro{
 	border-radius: 1em;
 	position: sticky;
-	top: 2em;
+	top: calc(50vh - 1.5em);
 	padding: 1em;
-	background-color: #222;
+	background-color: var(--preto);
 	z-index: 1;
 	font-size: .9em;
-	align-self: flex-end;
+	align-self: center;
+	margin: 2em 0;
+	transition: 1s;
+}
+#cardapio.mostrar_preços #dinheiro{
+	font-size: 0;
+}
+#cardapio div div{
+	background: none;
+	margin: 1em 1em 0;
+}
+#cardapio div div h3{
+	text-align: center;
+	margin: 0;
+	background-color: var(--preto);
+	font-size: .9em;
+	border-radius: 0.5em 0.5em 0 0;
+	padding: 0.5em 0 0.1em
+}
+#cardapio div div ul{
+	padding: 0;
+}
+#cardapio div div ul li{
+	display: list-item;
+	font-size: .9em;
 }
 
 #map_section{
@@ -178,7 +201,7 @@ header a{
 }
 #formulario span{
 	margin: 1em 0.5em 0;
-	background: #222222;
+	background-color: var(--preto);
 	color: var(--branco);
 	width: max-content;
 	padding: .75em 1em 0.5em;
@@ -188,7 +211,7 @@ header a{
 	align-self: center;
 	margin: 1em;
 	border:none;
-	background: var(--preto);
+	background-color: var(--preto);
 	color: var(--branco);
 	transition: .1s;
 }
