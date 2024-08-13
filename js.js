@@ -12,7 +12,3 @@ for (let i = 0; i < imagens_cardapio.length; i++) {
 		};
 	}
 }
-
-function clicou_dinheiro(){
-	document.querySelector('#cardapio').classList.add("mostrar_preços");
-}
