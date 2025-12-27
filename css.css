@@ -4,7 +4,7 @@
 :root{
 	--branco: #ffffee;
 	--preto: #222222;
-	--iluminado: rgba(255,255,255,0.1);
+	--iluminado: rgba(255,255,255,0.15);
 	--sombra: rgba(0,0,0,0.33);
 	--cor_principal: #FF8800;
 }
@@ -17,6 +17,7 @@ body {
 	font-family: sans-serif;
 	background-color: var(--cor_principal);
 	color: var(--preto);
+	text-shadow: 1px 1px 3px var(--sombra);
 }
 section:not(:first-of-type) {
 	border-top: .3em dashed var(--preto);
@@ -96,11 +97,12 @@ header a{
 	0px 0px 2px 2px var(--iluminado) inset;
 }
 #cardapio > span{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-inline: 1em;
-    font-size: initial;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-inline: 1em;
+	font-size: initial;
+	text-align: right;
 }
 #cardapio div:hover{
 	box-shadow:
@@ -264,5 +266,10 @@ header a{
 	}
 	#logo, header a{
 		margin: 1em;
+	}
+}
+@media (max-width: 500px) {
+	#cardapio div{
+		flex: 1;
 	}
 }
