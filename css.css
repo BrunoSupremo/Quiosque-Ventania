@@ -1,5 +1,6 @@
 *{
 	font-size: 20px;
+	text-wrap: balance;
 }
 :root{
 	--branco: #ffffee;
@@ -138,6 +139,7 @@ header a{
 	box-shadow: -1px 1px 2px 1px var(--iluminado) inset;
 }
 #cardapio div h2{
+	position: relative;
 	margin: .5em 0 0;
 	background-color: var(--preto);
 	padding: 0.25em 0.5em .1em 1em;
@@ -158,11 +160,21 @@ header a{
 	justify-content: space-between;
 	gap: 1em;
 }
-#cardapio div li:nth-of-type(even){
+#cardapio div li:nth-child(even){
+	background-image: linear-gradient(to right, transparent, var(--cor_principal));
+}
+#cardapio div h2:nth-child(even)::after{
+	content: "";
+	display: block;
+	width: calc(100% - 1em);
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	position: absolute;
 	background-image: linear-gradient(to right, transparent, var(--cor_principal));
 }
 #cardapio div li span:nth-child(1){
-	min-width: 5ch;
+	min-width: 6ch;
 	flex: 0;
 }
 #cardapio div div{
